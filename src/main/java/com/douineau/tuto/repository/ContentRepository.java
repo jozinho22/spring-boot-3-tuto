@@ -12,6 +12,6 @@ public interface ContentRepository extends ListCrudRepository<Content, Integer> 
 
     List<Content> findAllByTitleContains(String keyword);
 
-    @Query("SELECT * FROM Content WHERE status = :status ")
+    @Query("SELECT c FROM Content c WHERE c.status = :status ")
     List<Content> listByStatus(@Param("status") Status status);
 }

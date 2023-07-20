@@ -11,7 +11,7 @@ import jakarta.persistence.Embeddable;
         @AttributeOverride( name = "lastName", column = @Column(name = "contact_last_name")),
         @AttributeOverride( name = "phone", column = @Column(name = "contact_phone"))
 })
-public class Person {
+public class EmbeddedPerson {
 
     private String firstName;
 
